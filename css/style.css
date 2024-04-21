@@ -99,3 +99,11 @@ p {
     top:40%;
     font-family: georgia;
 }
+
+.symbolLeft{
+    left:70px;
+}
+
+.symbolRight{
+    right:70px;
+}
