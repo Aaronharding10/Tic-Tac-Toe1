@@ -25,3 +25,14 @@ function runGame() {
     document.getElementById('messageDisplay').textContent = ''; 
 }
 runGame();
+
+/** Function to set up all event listeners -  found on "https://www.shecodes.io/athena/102-adding-an-event-listener-to-a-button-click-in-javascript" */
+
+function setupEventListeners() {
+    document.getElementById('restartBtn').addEventListener('click', function() {
+        runGame();
+    });
+}
+/** calling event listeners to ensure flow of game */
+runGame(); 
+setupEventListeners(); 
