@@ -90,3 +90,12 @@ p {
     font-family: sans-serif;
     margin-left:10px;
 }
+
+.symbolLeft, .symbolRight { 
+    position:absolute;
+    font-size: 70px;
+    font-weight: bold;
+    color:black;
+    top:40%;
+    font-family: georgia;
+}
