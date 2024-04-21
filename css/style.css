@@ -35,3 +35,26 @@ h1 {
     height:225px;
     border: 2px;
 }
+.scoreArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px; 
+}
+
+#playerScore {
+    color: black;
+    font-size: 40px;
+    margin-left:50px;
+    font-family:Georgia,Times, serif;
+    font-weight: bold;
+}
+
+#computerScore {
+    color: black;
+    font-size: 40px;
+    margin-right:50px;
+    font-family:Georgia,Times, serif;
+    font-weight: bold;
+}
+
