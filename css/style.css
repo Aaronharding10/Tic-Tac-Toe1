@@ -46,7 +46,7 @@ h1 {
     color: black;
     font-size: 40px;
     margin-left:50px;
-    font-family:Georgia,Times, serif;
+    font-family:Georgia;
     font-weight: bold;
 }
 
@@ -54,7 +54,7 @@ h1 {
     color: black;
     font-size: 40px;
     margin-right:50px;
-    font-family:Georgia,Times, serif;
+    font-family:Georgia;
     font-weight: bold;
 }
 
