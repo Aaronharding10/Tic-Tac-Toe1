@@ -57,4 +57,11 @@ h1 {
     font-family:Georgia;
     font-weight: bold;
 }
+#restartBtn {
+    justify-content: center;
+    font-size: 30px; 
+    border-radius: 3px;
+    margin-top:80px;    
+    margin-left:15px;
+}
 
