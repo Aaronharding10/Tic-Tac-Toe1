@@ -48,6 +48,18 @@ function handleCellClick(cellIndex) {
     }
 }
 
+/** if statements to determine players turn and switching -  Process the turn after a move is made */
+
+function processTurn() {
+const winner = checkWinner();
+if (winner) {
+    updateScore(winner);
+    /**code to switch and determine player provided by mentor Mitko */
+    } else {
+        currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+        if (currentPlayer === 'O'); }
+    }
+}
 
 
 runGame();
