@@ -65,6 +65,26 @@ if (winner) {
 
 
 /**computerMove function */
+/** Simulate computer's move -  this function loops through the gameboard and uses an if statement to see if the cell is empty before making it's move randomly*/
+
+/** loop to find empty available cells */
+function makeComputerMove() {
+    let emptyCells = [];
+    for (let i = 0; i < gameBoard.length; i++) {
+        if (gameBoard[i] === '') {
+            emptyCells.push(i);
+    }
+}
+/** calculate random cell, select cpu move and update UI through query selector */
+if (emptyCells.length > 0) {
+    let randomIndex = Math.floor(Math.random() * emptyCells.length);
+    let computerMoveIndex = emptyCells[randomIndex];
+    gameBoard[computerMoveIndex] = 'O';
+    let selectedCell = document.querySelector('[data-cell-index = "' + computerMoveIndex + '"]');
+    selectedCell.textContent = 'O';
+    processTurn();
+}
+}
 
 /** Check for a winner or tie -  code inspired from "https://levelup.gitconnected.com/react-design-tic-tac-toe-game-interview-preparation-23f4c2866825" */
 
