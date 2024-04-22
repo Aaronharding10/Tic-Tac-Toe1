@@ -111,7 +111,7 @@ function updateScore(winner) {
     var messageDisplay = document.getElementById('messageDisplay');
     if (winner === 'X') {
         playerScore +=1;
-        messageDisplay.textContent = "Conratulations, you have won! Play again?";
+        messageDisplay.textContent = "CONGRATULATIONS, you have won! Play again?";
     } else if (winner === 'O') {
         computerScore +=1;
         messageDisplay.textContent = "Unlucky, play again?";

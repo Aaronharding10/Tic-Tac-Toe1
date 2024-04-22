@@ -119,6 +119,11 @@ p {
     color:black;
     margin-bottom: 20px;
 }
+@media (max-width: 800px) {
+    #messageDisplay{
+        margin-top: 20px;
+    }
+
 
 @media (max-width: 600px) {
     .symbolLeft {
@@ -134,11 +139,13 @@ p {
         font-size: 20px;
 }
 
+
 @media (max-width:350px) {
     #gameContainer { 
     width:150px;
     }
     #messageDisplay {
         font-size: 20px;
+        margin-top: 20px;
     }
 }}
