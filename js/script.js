@@ -54,15 +54,15 @@ function handleCellClick(cellIndex) {
 /** if statements to determine players turn and switching -  Process the turn after a move is made */
 
 function processTurn() {
-const winner = checkWinner();
-if (winner) {
-    updateScore(winner);
-    /**code to switch and determine player provided by mentor Mitko */
-    } else {
-        currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
-        if (currentPlayer === 'O'); {
-             /**timeout from "https://www.freecodecamp.org/news/javascript-settimeout-js-timer-to-delay-n-seconds/" */
-             setTimeout(makeComputerMove, 1000); 
+    const winner = checkWinner();
+    if (winner) {
+        updateScore(winner);
+        /**code to switch and determine player provided by mentor Mitko */
+        } else {
+            currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+            if (currentPlayer === 'O') {
+                /**timeout from "https://www.freecodecamp.org/news/javascript-settimeout-js-timer-to-delay-n-seconds/" */
+                setTimeout(makeComputerMove, 1000); 
             }
         }
     }
@@ -78,7 +78,7 @@ function makeComputerMove() {
             emptyCells.push(i);
     }
 }
-/** calculate random cell, select cpu move and update UI through query selector */
+/**code taken from love maths project to generate a random cell for the computer move */
 if (emptyCells.length > 0) {
     let randomIndex = Math.floor(Math.random() * emptyCells.length);
     let computerMoveIndex = emptyCells[randomIndex];
@@ -106,6 +106,19 @@ function checkWinner() {
     }
     return gameBoard.every(cell => cell !== '') ? "Tie" : null;
 }
+
+/** Update the score and game status based on the winner */
+/** a chain of if statements along with score increments to update and reflect score on game */
+
+function updateScore(winner) {
+    var messageDisplay = document.getElementById('messageDisplay');
+    if (winner === 'X') {
+        playerScore +=1;
+        messageDisplay.textContent = "Conratulations, you have won! Play again?";
+    } else if (winner === 'O') {
+        computerScore +=1;
+        messageDisplay.textContent = "Unlucky, play again?";
+    
 
 
 /** Function to set up all event listeners -  found on "https://www.shecodes.io/athena/102-adding-an-event-listener-to-a-button-click-in-javascript" */
