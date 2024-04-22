@@ -41,6 +41,7 @@ I would like to implement some logic within the makeComputerMove function to imp
       * Mockup picture for the README file.
 
 ### Javascript
+
 The Javascript code for Tic-Tac-Toe contains comments explaining the reasoning behind the functions and functions used. The handleCellClick and makeComputerMove functions are essential to how the game is played. However the checkWinner function is the most essential as this loops through each possible winning combination, it then destrcutures each combination array into 'a','b' and'c'. If the values at 'a','b' and 'c' are all the same it determines a winner. If no winner is found in the loop but all cells on the board are full it will result in a tie. The function for processTurn is also very important with the flow of the game and the setTimeout function allows a delay just after the player move and before the computer makes it's move to add a more steady flow to the game. 
 
 ## TESTING
@@ -85,7 +86,7 @@ The Javascript code for Tic-Tac-Toe contains comments explaining the reasoning b
               <td>Pass</td>
             </tr>
             <tr>
-              <td>clicking on full cells</td>
+              <td>Clicking on full cells</td>
               <td>When clicking on a full cell nothing happens.</td>
               <td>Pass</td>
             </tr>
@@ -102,6 +103,7 @@ The Javascript code for Tic-Tac-Toe contains comments explaining the reasoning b
 
 
 * CSS - no errors were discovered using the [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/).
+
 
 * Javascript -  no errors were returned using the offical [JS Hint validator](https://jshint.com/).
 
