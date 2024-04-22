@@ -16,7 +16,7 @@ function runGame() {
     for (let index = 0; index < 9; index++) {
         const cell = document.querySelector(`[data-cell-index='${index}']`);
         cell.textContent = ''; 
-        /**onclick provided by my mentor mitko */
+/**onclick provided by my mentor mitko */
         cell.onclick = function () {handleCellClick(index);};
     }
 /**ID selectors to update game scores and messages during game */
@@ -59,7 +59,7 @@ if (winner) {
         currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
         if (currentPlayer === 'O'); }
     }
-}
+
 
 /**computerMove function */
 
@@ -83,3 +83,4 @@ function checkWinner() {
 
 
 runGame();
+setupEventListeners();
