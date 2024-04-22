@@ -17,9 +17,11 @@ function runGame() {
         const cell = document.querySelector(`[data-cell-index='${index}']`);
         cell.textContent = ''; 
 /**onclick provided by my mentor mitko */
+
         cell.onclick = function () {handleCellClick(index);};
     }
 /**ID selectors to update game scores and messages during game */
+
     document.getElementById('playerScore').textContent = `Player: ${playerScore}`;
     document.getElementById('computerScore').textContent = `Computer: ${computerScore}`;
     document.getElementById('messageDisplay').textContent = ''; 
@@ -34,6 +36,7 @@ function setupEventListeners() {
     });
 }
 /** calling event listeners to ensure flow of game */
+
 runGame(); 
 setupEventListeners(); 
 
@@ -81,6 +84,14 @@ function checkWinner() {
     return gameBoard.every(cell => cell !== '') ? "Tie" : null;
 }
 
+
+/** Function to set up all event listeners -  found on "https://www.shecodes.io/athena/102-adding-an-event-listener-to-a-button-click-in-javascript" */
+
+function setupEventListeners() {
+    document.getElementById('restartBtn').addEventListener('click', function() {
+        runGame();
+    });
+}
 
 runGame();
 setupEventListeners();
