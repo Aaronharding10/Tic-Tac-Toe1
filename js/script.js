@@ -4,7 +4,7 @@ let computerScore = 0;
 let gameBoard = [];
 for (let i = 0; i < 9; i++){
     gameBoard.push("");
-} 
+}
 
 /** Function to start the game */
 /** querySelector obtained from "stack overflow" to select the HTML element and reset it to an empty string */
@@ -14,14 +14,13 @@ function runGame() {
     gameBoard = ["","","","","","","","",""];
 
     for (let index = 0; index < 9; index++) {
-        const cell = document.querySelector(`[data-cell-index='${index}']`);
+        let cell = document.querySelector(`[data-cell-index='${index}']`);
         cell.textContent = ''; 
-/**onclick provided by my mentor mitko */
-
+        /**onclick provided by my mentor mitko */
         cell.onclick = function () {handleCellClick(index);};
     }
-/**ID selectors to update game scores and messages during game */
 
+/**ID selectors to update game scores and messages during game */
     document.getElementById('playerScore').textContent = `Player: ${playerScore}`;
     document.getElementById('computerScore').textContent = `Computer: ${computerScore}`;
     document.getElementById('messageDisplay').textContent = ''; 
@@ -35,12 +34,12 @@ function setupEventListeners() {
         runGame();
     });
 }
-/** calling event listeners to ensure flow of game */
 
+/** calling event listeners to ensure flow of game */
 runGame(); 
 setupEventListeners(); 
 
-/** function to handle cell click */
+/** Handle cell clicks for game play */
 
 function handleCellClick(cellIndex) {
     if (gameBoard[cellIndex] === '' && currentPlayer === 'X') {
@@ -51,26 +50,24 @@ function handleCellClick(cellIndex) {
     }
 }
 
-/** if statements to determine players turn and switching -  Process the turn after a move is made */
+/** series of if statements to determine players turn and switching -  Process the turn after a move is made */
 
 function processTurn() {
-    const winner = checkWinner();
-    if (winner) {
-        updateScore(winner);
-        /**code to switch and determine player provided by mentor Mitko */
-        } else {
-            currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
-            if (currentPlayer === 'O') {
-                /**timeout from "https://www.freecodecamp.org/news/javascript-settimeout-js-timer-to-delay-n-seconds/" */
-                setTimeout(makeComputerMove, 1000); 
-            }
+const winner = checkWinner();
+if (winner) {
+    updateScore(winner);
+    /**code to switch and determine player provided by mentor Mitko */
+    } else {
+        currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+        if (currentPlayer === 'O') {
+            /**timeout from "https://www.freecodecamp.org/news/javascript-settimeout-js-timer-to-delay-n-seconds/" */
+            setTimeout(makeComputerMove, 1000); 
         }
     }
-        
-/**computerMove function */
-/** Simulate computer's move -  this function loops through the gameboard and uses an if statement to see if the cell is empty before making it's move randomly*/
+}
 
-/** loop to find empty available cells */
+/** Simulate computer's move -  this function loops through the gameboard and uses an if statement to see if the cell is empty before making it's move */
+
 function makeComputerMove() {
     let emptyCells = [];
     for (let i = 0; i < gameBoard.length; i++) {
@@ -79,14 +76,14 @@ function makeComputerMove() {
     }
 }
 /**code taken from love maths project to generate a random cell for the computer move */
-if (emptyCells.length > 0) {
-    let randomIndex = Math.floor(Math.random() * emptyCells.length);
-    let computerMoveIndex = emptyCells[randomIndex];
-    gameBoard[computerMoveIndex] = 'O';
-    let selectedCell = document.querySelector('[data-cell-index = "' + computerMoveIndex + '"]');
-    selectedCell.textContent = 'O';
-    processTurn();
-}
+    if (emptyCells.length > 0) {
+        let randomIndex = Math.floor(Math.random() * emptyCells.length);
+        let computerMoveIndex = emptyCells[randomIndex];
+        gameBoard[computerMoveIndex] = 'O';
+        let selectedCell = document.querySelector('[data-cell-index = "' + computerMoveIndex + '"]');
+        selectedCell.textContent = 'O';
+        processTurn();
+    }
 }
 
 /** Check for a winner or tie -  code inspired from "https://levelup.gitconnected.com/react-design-tic-tac-toe-game-interview-preparation-23f4c2866825" */
@@ -118,16 +115,11 @@ function updateScore(winner) {
     } else if (winner === 'O') {
         computerScore +=1;
         messageDisplay.textContent = "Unlucky, play again?";
-    
-
-
-/** Function to set up all event listeners -  found on "https://www.shecodes.io/athena/102-adding-an-event-listener-to-a-button-click-in-javascript" */
-
-function setupEventListeners() {
-    document.getElementById('restartBtn').addEventListener('click', function() {
-        runGame();
-    });
+    } else if (winner === "Tie") {
+        messageDisplay.textContent = "Cat game! Play again?";
+    }
 }
 
-runGame();
-setupEventListeners();
+/** */
+runGame(); 
+setupEventListeners(); 

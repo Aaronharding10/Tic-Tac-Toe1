@@ -119,3 +119,25 @@ p {
     color:black;
     margin-bottom: 20px;
 }
+@media (max-width:550px) {
+    .symbolLeft {
+        display:none;
+       }
+       .symbolRight {
+        display:none;
+       }
+      #playerScore {
+        font-size: 20px;
+      }
+      #computerScore { 
+        font-size: 20px;
+      }
+      {
+       
+      }
+}
+@media (max-width:350px) {
+    #gameContainer { 
+    width:150px;
+    }
+}
