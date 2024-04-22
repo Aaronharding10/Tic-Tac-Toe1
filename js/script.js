@@ -16,7 +16,6 @@ function runGame() {
     for (let index = 0; index < 9; index++) {
         let cell = document.querySelector(`[data-cell-index='${index}']`);
         cell.textContent = ''; 
-        /**onclick provided by my mentor mitko */
         cell.onclick = function () {handleCellClick(index);};
     }
 
