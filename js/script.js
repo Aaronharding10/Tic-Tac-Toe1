@@ -36,3 +36,12 @@ function setupEventListeners() {
 /** calling event listeners to ensure flow of game */
 runGame(); 
 setupEventListeners(); 
+
+/** function to handle cell click */
+function handleCellClick(cellIndex) {
+    if (gameBoard[cellIndex] === '' && currentPlayer === 'X') {
+        gameBoard[cellIndex] = currentPlayer;
+        /** taken from "https://www.turing.com/kb/guide-to-string-concatenation-in-js" */
+        document.querySelector(`[data-cell-index='${index}']`).textContent = currentPlayer;
+    }
+}
