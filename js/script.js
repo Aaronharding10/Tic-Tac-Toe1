@@ -61,5 +61,25 @@ if (winner) {
     }
 }
 
+/**computerMove function */
+
+/** Check for a winner or tie -  code inspired from "https://levelup.gitconnected.com/react-design-tic-tac-toe-game-interview-preparation-23f4c2866825" */
+
+function checkWinner() {
+    const winningCombinations = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
+    ];
+
+    for (let combination of winningCombinations) {
+        const [a, b, c] = combination;
+        if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
+            return gameBoard[a];
+        }
+    }
+    return gameBoard.every(cell => cell !== '') ? "Tie" : null;
+}
+
 
 runGame();
