@@ -60,10 +60,13 @@ if (winner) {
     /**code to switch and determine player provided by mentor Mitko */
     } else {
         currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
-        if (currentPlayer === 'O'); }
+        if (currentPlayer === 'O'); {
+             /**timeout from "https://www.freecodecamp.org/news/javascript-settimeout-js-timer-to-delay-n-seconds/" */
+             setTimeout(makeComputerMove, 1000); 
+            }
+        }
     }
-
-
+        
 /**computerMove function */
 /** Simulate computer's move -  this function loops through the gameboard and uses an if statement to see if the cell is empty before making it's move randomly*/
 
