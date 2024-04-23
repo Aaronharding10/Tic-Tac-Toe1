@@ -122,7 +122,10 @@ The Javascript code for Tic-Tac-Toe contains comments explaining the reasoning b
               <td>After a winner or loser has been decidied the score area for the respective winner increases by 1</td>
               <td>Pass</td>
               </tr>
-              </tr>       
+              <td>Clicking on cell after game end</td>
+              <td>Once a game ends, clicking on a cell be it empty or full has no action</td>
+              <td>Pass</td>
+              </tr>      
 </table>
 
 
