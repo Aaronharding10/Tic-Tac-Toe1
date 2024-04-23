@@ -55,7 +55,7 @@ Once a game has finished a message appears just above the grid alerting the play
 * Improved computer logic - 
 I would like to implement some logic within the makeComputerMove function to improve it's ability to attack and defend instead of picking random cells to choose.  
 *  I would also consider making it a best of series such as best of 5 or even 7 but the idea of an infinity game would appeal to a lot of people as it is quite relaxing and used mainly for fun. 
-* modals?
+
 
 
 ### [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used-)
