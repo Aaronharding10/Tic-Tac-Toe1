@@ -143,21 +143,26 @@ p {
 @media (max-width:350px) {
     #gameContainer { 
     max-width: 70%;
-    margin-right: 10px;
-    
+    width:80%
     }
+    h1{
+        margin-left:30px;
+    }
+
     #messageDisplay {
         font-size: 20px;
         margin-top: 20px;
     }
+
     #restartBtn {
-      margin-left: 80px;
+      margin-left:120px;
     }
-    body {
-        margin-right:5px;
-        
-    }
+
     .footer {
-        margin:5px;
+    margin-left:20px;
+
+    }
+    #computerScore {
+        margin-left: 30px;
     }
 }}}

@@ -1,6 +1,6 @@
 # Tic-Tac-Toe
 
-[Tic-Tac-Toe] (Link) is a website containing an interactive but easy and fun game of X's and O's with the player competing against the computer. 
+[Tic-Tac-Toe] (https://github.com/Aaronharding10/Tic-Tac-Toe1) is a website containing an interactive but easy and fun game of X's and O's with the player competing against the computer. 
 
 ## Table of contents
 
@@ -22,7 +22,34 @@ The game uses minimalist design to ensure the game is easy to understand and pla
   *Mainly a pen and notebook were used to structure the site. 
 
 ### [Features](#features)
-* Existing features
+
+### Game Area
+The Grid is the main area of the website and represents the grid consisting of 3x3 even squares in which the game will take place. It also contains a restart button which restarts each game, clears the board and updates the relevant score.
+ 
+<img src = "images/Gamegrid1.jpeg">
+
+### Player area
+This section to the left of the site highlights the players score and also their symbol 'X'.
+
+<img src = "images/Playerarea.jpeg">
+
+
+### Computer area
+This section to the right of the grid highlights the computer's score and it's symbol 'O'.
+
+<img src = "images/comparea.jpeg">
+
+### Footer
+The footer at the bottom of the site explains the game rules 
+
+<img src = "images/footerrules.jpeg">
+
+### Message Display
+Once a game has finished a message appears just above the grid alerting the player of the result. Example within 
+
+<img src = "images/messagedisplay.jpeg">
+
+###
 
 ### [Features Left to Implement](#features-left-to-implement)
 * Improved computer logic - 
@@ -128,6 +155,15 @@ In order to publish the site, deployment was carried out using GitHub pages. In 
 
 
 ## CREDITS
+* https://stackoverflow.com/
+
+* https://www.shecodes.io/
+
+* https://www.turing.com/
+
+* https://www.freecodecamp.org/
+
+* https://medium.com/
 
 ### Color
 * Colors were kept as black and white as possible as the game itself is very black and white and minimalist. "Whitesmoke" however was used for the background color throughout. 
