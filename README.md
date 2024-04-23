@@ -149,7 +149,7 @@ The website was provided to 2 users who were both easily able to play and unders
 ### Fixed Bugs
 * Upon testing the flow of the game once all code and functions were loaded I implemented a setTimeout to delay the computer's move for a second as the response was instantaneous and far too fast.
 * An EventListener function was added to help with the functionality of the restart button as it was not being recognised fluidly. 
-* 
+
 
 ## DEPLOYMENT
 
