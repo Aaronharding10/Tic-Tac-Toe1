@@ -1,13 +1,16 @@
+/** variables declared to manage game */
 let currentPlayer = "X";
 let playerScore = 0;
 let computerScore = 0;
 let gameBoard = [];
+/** loop to set a gameboard with 9 empty strings */
 for (let i = 0; i < 9; i++){
     gameBoard.push("");
 }
 
-/** Function to start the game */
-/** querySelector obtained from "stack overflow" to select the HTML element and reset it to an empty string */
+/** Function to start the game - a for loop  runs and grabs all cells 0-8  and makes sure the cells are empty to start with a clear game board*/
+/** */
+
 
 function runGame() {
     currentPlayer = "X"; 
@@ -16,6 +19,7 @@ function runGame() {
     for (let index = 0; index < 9; index++) {
         let cell = document.querySelector(`[data-cell-index='${index}']`);
         cell.textContent = ''; 
+        /**code obtained from my mentor Mitko to assign an onclick event to each cell and then calling the handleCellClick function */
         cell.onclick = function () {handleCellClick(index);};
     }
 
@@ -26,7 +30,7 @@ function runGame() {
 }
 runGame();
 
-/** Function to set up all event listeners -  found on "https://www.shecodes.io/athena/102-adding-an-event-listener-to-a-button-click-in-javascript" */
+/** Event listener function to restart game and call runGame */
 
 function setupEventListeners() {
     document.getElementById('restartBtn').addEventListener('click', function() {
@@ -38,18 +42,21 @@ function setupEventListeners() {
 runGame(); 
 setupEventListeners(); 
 
-/** Handle cell clicks for game play */
+/** This function uses a condition to check if the selected cell is empty and if the current player is 'X'.
+ * once the condition is met the gameboard and that specific cell are updated to reflect players move. Process turn is then called.
+ */
 
 function handleCellClick(cellIndex) {
     if (gameBoard[cellIndex] === '' && currentPlayer === 'X') {
         gameBoard[cellIndex] = currentPlayer;
-        /** taken from "https://www.turing.com/kb/guide-to-string-concatenation-in-js" */
         document.querySelector('[data-cell-index = "' + cellIndex + '"]').textContent = currentPlayer;
         processTurn();
     }
 }
 
-/** series of if statements to determine players turn and switching -  Process the turn after a move is made */
+/** After checking for a winner and update score the function then runs a series of if statements to determine players turn and switching -  Process the turn after a move is made
+ * A setTimeout was also implemented to delay the computers move as it was instantaneous with the players move and was not a smooth experience.
+ */
 
 function processTurn() {
 const winner = checkWinner();
@@ -59,13 +66,15 @@ if (winner) {
     } else {
         currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
         if (currentPlayer === 'O') {
-            /**timeout from "https://www.freecodecamp.org/news/javascript-settimeout-js-timer-to-delay-n-seconds/" */
             setTimeout(makeComputerMove, 1000); 
         }
     }
 }
 
-/** Simulate computer's move -  this function loops through the gameboard and uses an if statement to see if the cell is empty before making it's move */
+/** Simulate computer's move -  this function loops through the gameboard and uses an if statement to see if the cell is empty before making it's move 
+ * a random cell is then chosen using Math.random and the move is then made by updating the corresponding cell using a query selector
+ * processTurn function then called to switch player
+*/
 
 function makeComputerMove() {
     let emptyCells = [];
@@ -74,7 +83,7 @@ function makeComputerMove() {
             emptyCells.push(i);
     }
 }
-/**code taken from love maths project to generate a random cell for the computer move */
+/**code taken from love maths project to generate a random cell for the computer's move */
     if (emptyCells.length > 0) {
         let randomIndex = Math.floor(Math.random() * emptyCells.length);
         let computerMoveIndex = emptyCells[randomIndex];
@@ -85,7 +94,11 @@ function makeComputerMove() {
     }
 }
 
-/** Check for a winner or tie -  code inspired from "https://levelup.gitconnected.com/react-design-tic-tac-toe-game-interview-preparation-23f4c2866825" */
+/** The winning combinations defines all possible winning scenarios. The function goes through the winning combinations to see if 
+ * any of them contain the same values across all three cells and if so, a winner is found. 
+ * After this the function then checks to see if there are any empty cells on the board. If there are none then it is a tie. 
+ * If there are then the game continues.  
+  */
 
 function checkWinner() {
     const winningCombinations = [
@@ -119,6 +132,6 @@ function updateScore(winner) {
     }
 }
 
-/** */
+
 runGame(); 
 setupEventListeners(); 

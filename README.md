@@ -94,12 +94,15 @@ The Javascript code for Tic-Tac-Toe contains comments explaining the reasoning b
               <td>Updating score after each game</td>
               <td>After a winner or loser has been decidied the score area for the respective winner increases by 1</td>
               <td>Pass</td>
-                   
+              </tr>
+              </tr>       
 </table>
 
 
 ### Validator Testing
 * HTML - No errors were discovered using the [W3C validator](https://validator.w3.org/).
+
+
 
 
 * CSS - no errors were discovered using the [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/).
@@ -112,7 +115,7 @@ The Javascript code for Tic-Tac-Toe contains comments explaining the reasoning b
 * 
 
 ## DEPLOYMENT
-### Publication
+### Local Deployment
 
 In order to publish the site, deployment was carried out using GitHub pages. In order to deploy the site the following steps were followed:
 - Open the GitHub repository
@@ -122,7 +125,7 @@ In order to publish the site, deployment was carried out using GitHub pages. In 
 - Under "branch" select "main"
 - Click "save"
 
-### Local Deployment
+
 
 ## CREDITS
 
