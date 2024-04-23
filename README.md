@@ -126,32 +126,40 @@ The Javascript code for Tic-Tac-Toe contains comments explaining the reasoning b
 </table>
 
 
+### User Testing
+
+The website was provided to 2 users who were both easily able to play and understand the game method. Both users highlighted the computer's random logic and also the game pace which is why the "setTimeout" was implemented to allow time before the computer made its move. Both also agreed a second would be sufficient.  
+
 ### Validator Testing
 * HTML - No errors were discovered using the [W3C validator](https://validator.w3.org/).
 
-
-
+<img src = "images/htmlw3c.jpeg">
 
 * CSS - no errors were discovered using the [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/).
 
+<img src = "images/cssvalid.jpeg">
 
 * Javascript -  no errors were returned using the offical [JS Hint validator](https://jshint.com/).
 
+<img src = "images/jsvalid.jpeg">
 
 ### Fixed Bugs
-* 
+* Upon 
 
 ## DEPLOYMENT
-### Local Deployment
 
 In order to publish the site, deployment was carried out using GitHub pages. In order to deploy the site the following steps were followed:
-- Open the GitHub repository
-- Navigate to the "settings" tab
-- On the left hand side of the page scroll down and select "pages" 
-- Under "source" select "deploy from a branch"
-- Under "branch" select "main"
-- Click "save"
+- Open the GitHub repository.
+- Navigate to the "settings" tab.
+- On the left hand side of the page scroll down and select "pages".
+- Under "source" select "deploy from a branch".
+- Under "branch" select "main".
+- Click "save".
+- The live link is "https://aaronharding10.github.io/Tic-Tac-Toe1/".
 
+### Local Deployment
+
+In order to deploy the site locally a user can enter "git clone https://aaronharding10.github.io/Tic-Tac-Toe1/" into the command prompt on their computer and hit enter.
 
 
 ## CREDITS
