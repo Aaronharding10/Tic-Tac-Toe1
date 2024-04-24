@@ -155,7 +155,7 @@ The website was provided to 2 users who were both easily able to play and unders
 ### Fixed Bugs
 * Upon testing the flow of the game once all code and functions were loaded I implemented a setTimeout to delay the computer's move for a second as the response was instantaneous and far too fast.
 * An EventListener function was added to help with the functionality of the restart button as it was not being recognised fluidly. 
-* Upon testing the responsiveness via "https://ui.dev/amiresponsive I noticed that the footer was not set to the bottom when using a desktop or an ipad. However, having test the site on all devices the footer styling seems to stay at the bottom and seems ok. 
+* Upon testing the responsiveness via "https://ui.dev/amiresponsive I noticed that the footer was not set to the bottom when using a desktop or an ipad. However, having test the site on all devices the footer styling seems to stay at the bottom. 
 
 
 ## DEPLOYMENT
