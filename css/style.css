@@ -124,7 +124,6 @@ p {
         margin-top: 20px;
         font-size: 20px;
     }
-    #restartBTN
     }
 
 @media (max-width: 700px) {
@@ -137,9 +136,7 @@ p {
       #playerScore {
         font-size: 20px;
       }
-      .footer {
-        margin:5px;
-      }
+     
       #computerScore { 
         font-size: 20px;
     }
@@ -171,7 +168,7 @@ p {
     }
 
     #restartBtn {
-      margin-left:100px;
+      margin-left:80px;
       font-size: 20px;
       margin-bottom: 10px;
     }
