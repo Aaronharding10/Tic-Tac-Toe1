@@ -53,6 +53,10 @@ Once a game has finished a message appears just above the grid alerting the play
 
 ###
 
+### Color
+
+Colors were kept as black and white as possible as the game itself is very black and white and minimalist. "Whitesmoke" however was used for the background color throughout.
+
 ### [Features Left to Implement](#features-left-to-implement)
 * Improved computer logic - 
 I would like to implement some logic within the makeComputerMove function to improve it's ability to attack and defend instead of picking random cells to choose.  
