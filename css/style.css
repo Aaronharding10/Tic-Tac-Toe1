@@ -111,6 +111,7 @@ p {
 
 .cell.x{
     font-family: Georgia;
+    font-weight: bold;
 }
 #messageDisplay { 
     font-size:30px;
