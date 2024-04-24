@@ -196,8 +196,6 @@ In order to deploy the site locally a user can enter "git clone https://aaronhar
 
 * https://medium.com/
 
-### Color
-* Colors were kept as black and white as possible as the game itself is very black and white and minimalist. "Whitesmoke" however was used for the background color throughout. 
 
 
 
